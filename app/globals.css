@@ -1,0 +1,52 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: dark;
+}
+
+html,
+body {
+  background: #08131f;
+  color: #e6f1f8;
+}
+
+body {
+  background-image:
+    radial-gradient(1100px 620px at 12% -10%, rgba(47, 139, 196, 0.20), transparent 60%),
+    radial-gradient(900px 520px at 92% 0%, rgba(85, 168, 216, 0.12), transparent 62%);
+  background-attachment: fixed;
+}
+
+@layer components {
+  .panel {
+    @apply rounded-xl border border-white/10 bg-white/[0.035] backdrop-blur;
+  }
+  .chip {
+    @apply inline-flex items-center rounded-full border border-white/15 bg-white/5 px-2.5 py-0.5 text-[11px] font-medium text-ice-200;
+  }
+  .btn {
+    @apply inline-flex items-center justify-center gap-2 rounded-lg bg-ice-500 px-4 py-2 text-sm font-semibold text-white transition hover:bg-ice-400 disabled:cursor-not-allowed disabled:opacity-50;
+  }
+  .btn-ghost {
+    @apply inline-flex items-center justify-center gap-2 rounded-lg border border-white/15 bg-white/5 px-3 py-1.5 text-sm font-medium text-ice-100 transition hover:bg-white/10 disabled:opacity-50;
+  }
+  .field {
+    @apply w-full rounded-lg border border-white/15 bg-black/30 px-3 py-2 text-sm text-ice-50 placeholder:text-ice-300/40 focus:border-ice-400 focus:outline-none;
+  }
+  .label {
+    @apply mb-1 block text-[11px] font-semibold uppercase tracking-wider text-ice-300/70;
+  }
+}
+
+/* Leaflet dark tiles */
+.leaflet-container {
+  background: #0d2438;
+  font-family: inherit;
+}
+.leaflet-bar a,
+.leaflet-control-attribution {
+  background: #0e2032 !important;
+  color: #c2e0f3 !important;
+}
